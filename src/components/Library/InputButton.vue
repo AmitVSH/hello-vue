@@ -20,5 +20,6 @@ button {
   color: #fff;
   font-family: "Prompt", sans-serif;
   cursor: pointer;
+  outline: 0 !important;
 }
 </style>
