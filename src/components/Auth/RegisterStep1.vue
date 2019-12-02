@@ -4,11 +4,11 @@
       <InputText>
         <!-- component body is passed with slots -->
         <label for="mobile">Mobile No:</label>
-        <input id="mobile" type="text" name="mobile" value="" placeholder="Your best contact number?">
+        <input v-model="mobile" id="mobile" type="text" name="mobile" value="" placeholder="Your best contact number?">
       </InputText>
       <InputText>
         <label for="email">Email:</label>
-        <input id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
+        <input v-model="email" id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
       </InputText>
 
 
@@ -39,6 +39,12 @@ export default {
   components: {
     InputText,
     InputButton
+  },
+  data() {
+    return {
+      email:'',
+      mobile: ''
+    }
   }
 }
 </script>
