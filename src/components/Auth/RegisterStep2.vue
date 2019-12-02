@@ -19,9 +19,12 @@
           </InputButton>
         </router-link>
 
-        <InputButton>
-          <button type="button" name="button">Done</button>
-        </InputButton>
+        <router-link to="/register/complete">
+          <InputButton>
+            <button type="button" name="button">Done</button>
+          </InputButton>
+        </router-link>
+
       </div>
 
     </div>

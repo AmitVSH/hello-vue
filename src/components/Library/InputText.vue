@@ -12,6 +12,7 @@ export default {
 <style lang="css" scoped>
   .input__wrapper {
     padding: 10px 10px;
+    width: 350px;
   }
   label {
     float: left;
