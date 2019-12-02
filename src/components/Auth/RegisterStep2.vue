@@ -3,16 +3,16 @@
     <div class="register__wrapper">
       <InputText>
         <!-- component body is passed with slots -->
-        <label for="mobile">Mobile No:</label>
-        <input id="mobile" type="text" name="mobile" value="" placeholder="Your best contact number?">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" value="" placeholder="What's your name?">
       </InputText>
       <InputText>
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
+        <label for="email">Address:</label>
+        <input id="email" type="email" name="email" value="" placeholder="Where do you live?">
       </InputText>
 
       <InputButton>
-        <button type="button" name="button">Next</button>
+        <button type="button" name="button">Done</button>
       </InputButton>
     </div>
   </div>
@@ -22,7 +22,7 @@
 import InputText from "../Library/InputText";
 import InputButton from "../Library/InputButton";
 export default {
-  name: "RegisterStep1",
+  name: "RegisterStep2",
   components: {
     InputText,
     InputButton
