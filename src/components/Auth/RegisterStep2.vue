@@ -11,9 +11,19 @@
         <input id="email" type="email" name="email" value="" placeholder="Where do you live?">
       </InputText>
 
-      <InputButton>
-        <button type="button" name="button">Done</button>
-      </InputButton>
+
+      <div class="buttons__wrapper">
+        <router-link to="/register">
+          <InputButton>
+            <button type="button" name="button">Back</button>
+          </InputButton>
+        </router-link>
+
+        <InputButton>
+          <button type="button" name="button">Done</button>
+        </InputButton>
+      </div>
+
     </div>
   </div>
 </template>
@@ -38,5 +48,9 @@ export default {
   }
   .register__wrapper  {
     padding: 21px 0px;
+  }
+  .buttons__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 </style>

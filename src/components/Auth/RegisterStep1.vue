@@ -11,9 +11,12 @@
         <input id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
       </InputText>
 
-      <InputButton>
-        <button type="button" name="button">Next</button>
-      </InputButton>
+      <router-link to="/register/step2">
+        <InputButton>
+          <button type="button" name="button">Next</button>
+        </InputButton>
+      </router-link>
+
     </div>
   </div>
 </template>
