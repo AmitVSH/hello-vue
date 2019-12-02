@@ -10,16 +10,22 @@
         <label for="email">Email:</label>
         <input id="email" type="email" name="email" value="" placeholder="Enter email">
       </InputText>
+
+      <InputButton>
+        <button type="button" name="button">Next</button>
+      </InputButton>
     </div>
   </div>
 </template>
 
 <script>
 import InputText from "../Library/InputText";
+import InputButton from "../Library/InputButton";
 export default {
   name: "RegisterStep1",
   components: {
-    InputText
+    InputText,
+    InputButton
   }
 }
 </script>
