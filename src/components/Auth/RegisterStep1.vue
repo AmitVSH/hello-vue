@@ -47,10 +47,6 @@ export default {
   },
   mixins: [main],
   data() {
-    return {
-      email:'',
-      mobile: ''
-    }
   },
   computed: {
   }
