@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="register__container">
     <div class="register__wrapper">
+      <div class="progress__wrapper">
+        <h3>{{registrationProgress}}</h3>
+      </div>
       <InputText>
         <!-- component body is passed with slots -->
         <label for="name">Name:</label>
@@ -44,7 +47,17 @@ export default {
   computed: {
     ...mapState({
       user: state => state.user
-    })
+    }),
+
+    registrationProgress: function() {
+      let progress = 0;
+      if(this.user.email.length > 0) progress += 25;
+      if(this.user.mobile.length > 0) progress += 25;
+      if(this.user.name.length > 0) progress += 25;
+      if(this.user.address.length > 0) progress += 25;
+
+      return progress+"% completed...";
+    }
   }
 }
 </script>
