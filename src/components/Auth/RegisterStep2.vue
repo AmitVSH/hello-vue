@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
 import InputText from "../Library/InputText";
 import InputButton from "../Library/InputButton";
 
@@ -48,9 +47,6 @@ export default {
   },
   mixins: [main],
   computed: {
-    ...mapState({
-      user: state => state.user
-    }),
   }
 }
 </script>
