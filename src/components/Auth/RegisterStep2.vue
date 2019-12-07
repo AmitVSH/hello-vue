@@ -6,29 +6,29 @@
       </div>
       <InputText>
         <!-- component body is passed with slots -->
-        <label for="mobile">Mobile No:</label>
-        <input v-model="user.mobile" id="mobile" type="text" name="mobile" value="" placeholder="Your best contact number?">
+        <label for="name">Name:</label>
+        <input v-model="user.name" id="name" type="text" name="name" value="" placeholder="What's your name?">
       </InputText>
       <InputText>
-        <label for="email">Email:</label>
-        <input v-model="user.email" id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
+        <label for="address">Address:</label>
+        <input v-model="user.address" id="address" type="address" name="address" value="" placeholder="Where do you live?">
       </InputText>
 
 
       <div class="buttons__wrapper">
-        <router-link to="/">
+        <router-link to="/register">
           <InputButton>
-            <button type="button" name="button">Home</button>
+            <button type="button" name="button">Back</button>
           </InputButton>
         </router-link>
 
-        <router-link to="/register/step2">
+        <router-link to="/register/complete">
           <InputButton>
-            <button type="button" name="button">Next</button>
+            <button type="button" name="button">Done</button>
           </InputButton>
         </router-link>
+
       </div>
-
 
     </div>
   </div>
@@ -40,13 +40,12 @@ import InputButton from "../Library/InputButton";
 
 import { main } from "../../mixins/main";
 export default {
-  name: "RegisterStep1",
+  name: "RegisterStep2",
   components: {
     InputText,
     InputButton
   },
   mixins: [main],
-  
   computed: {
   }
 }
