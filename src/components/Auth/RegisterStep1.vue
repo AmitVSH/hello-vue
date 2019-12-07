@@ -46,8 +46,7 @@ export default {
     InputButton
   },
   mixins: [main],
-  data() {
-  },
+  
   computed: {
   }
 }
