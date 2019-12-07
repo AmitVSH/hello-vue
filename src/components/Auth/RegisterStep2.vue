@@ -7,8 +7,8 @@
         <input id="name" type="text" name="name" value="" placeholder="What's your name?">
       </InputText>
       <InputText>
-        <label for="email">Address:</label>
-        <input id="email" type="email" name="email" value="" placeholder="Where do you live?">
+        <label for="address">Address:</label>
+        <input id="address" type="address" name="address" value="" placeholder="Where do you live?">
       </InputText>
 
 
