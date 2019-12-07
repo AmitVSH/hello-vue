@@ -4,11 +4,11 @@
       <InputText>
         <!-- component body is passed with slots -->
         <label for="name">Name:</label>
-        <input id="name" type="text" name="name" value="" placeholder="What's your name?">
+        <input v-model="user.name" id="name" type="text" name="name" value="" placeholder="What's your name?">
       </InputText>
       <InputText>
         <label for="address">Address:</label>
-        <input id="address" type="address" name="address" value="" placeholder="Where do you live?">
+        <input v-model="user.address" id="address" type="address" name="address" value="" placeholder="Where do you live?">
       </InputText>
 
 
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import InputText from "../Library/InputText";
 import InputButton from "../Library/InputButton";
 export default {
@@ -39,6 +40,11 @@ export default {
   components: {
     InputText,
     InputButton
+  },
+  computed: {
+    ...mapState({
+      user: state => state.user
+    })
   }
 }
 </script>

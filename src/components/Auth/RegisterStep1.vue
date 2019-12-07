@@ -4,11 +4,11 @@
       <InputText>
         <!-- component body is passed with slots -->
         <label for="mobile">Mobile No:</label>
-        <input v-model="mobile" id="mobile" type="text" name="mobile" value="" placeholder="Your best contact number?">
+        <input v-model="user.mobile" id="mobile" type="text" name="mobile" value="" placeholder="Your best contact number?">
       </InputText>
       <InputText>
         <label for="email">Email:</label>
-        <input v-model="email" id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
+        <input v-model="user.email" id="email" type="email" name="email" value="" placeholder="Where can we send mail to you?">
       </InputText>
 
 
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import InputText from "../Library/InputText";
 import InputButton from "../Library/InputButton";
 export default {
@@ -45,6 +46,11 @@ export default {
       email:'',
       mobile: ''
     }
+  },
+  computed: {
+    ...mapState({
+      user: state => state.user
+    })
   }
 }
 </script>
