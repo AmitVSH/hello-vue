@@ -38,12 +38,15 @@
 import { mapState } from "vuex";
 import InputText from "../Library/InputText";
 import InputButton from "../Library/InputButton";
+
+import { main } from "../../mixins/main";
 export default {
   name: "RegisterStep1",
   components: {
     InputText,
     InputButton
   },
+  mixins: [main],
   data() {
     return {
       email:'',
